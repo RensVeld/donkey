@@ -1,4 +1,6 @@
-<?php
+<?
+
+//KELVIN HEEFT EEN MOOI GLANZENDE BOL
 
 namespace database;
 
