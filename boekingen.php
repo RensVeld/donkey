@@ -1,6 +1,8 @@
 <?php include "include/nav.php"; ?>
 <!-- debug print database Boekingen -->
 <?php
+
+/*TEST*/
 $db = new database\Database($db_host, $db_user, $db_pass, $db_name, $db_port);
 $boekingen = $db->getBoekingen();
 
