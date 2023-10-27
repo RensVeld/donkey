@@ -6,6 +6,7 @@ namespace database;
     // ID INT
     // Recht VARCHAR(45)
     // Rechten INT (bitmask) ( 1 = read | 2 = write | 4 = update | 8 = delete | 2147483647 = admin )
+    // Rechten VARCHAR(
 
     class Gebruikersrechten
     {
