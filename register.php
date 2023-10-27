@@ -90,7 +90,7 @@ include "include/head.php";
 									<input type="text" class="form-control" id="name" name="name" placeholder="Naam" required>
 								</div>
 								<div class="form-group mt-2">
-									<label for="email">Email:</label>
+									<label for="email">Eail:</label>
 									<input type="email" class="form-control" id="email" name="email" placeholder="Email" required>
 								</div>
 								<div class="form-group mt-2">
