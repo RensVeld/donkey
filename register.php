@@ -23,7 +23,7 @@ include "include/head.php";
 	// Email VARCHAR(100)
 	// Telefoon VARCHAR(20)
 	// Wachtwoord VARCHAR(100)
-	// Gewijzigd TIMESTAMP
+	// Gewijzigd TIMESTAMP 1
 
 
 	// if form is submitted
