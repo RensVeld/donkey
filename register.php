@@ -70,7 +70,7 @@ include "include/head.php";
 					<div class="card">
 						<div class="card-body">
 							<h3 class="card-title text-center">Donkey Travel account aanvragen</h3>
-							<form action="register" name="register" method="post">
+							<form action="register.php" name="register" method="post">
 								<?php
 								if (isset($error)) {
 									echo '<div class="alert alert-info mt-3" role="alert">
@@ -90,7 +90,7 @@ include "include/head.php";
 									<input type="text" class="form-control" id="name" name="name" placeholder="Naam" required>
 								</div>
 								<div class="form-group mt-2">
-									<label for="email">Eail:</label>
+									<label for="email">Email:</label>
 									<input type="email" class="form-control" id="email" name="email" placeholder="Email" required>
 								</div>
 								<div class="form-group mt-2">
