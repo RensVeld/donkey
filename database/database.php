@@ -232,7 +232,7 @@ class Database
         $result = $this->db->query("SELECT * FROM klanten");
         $klanten = array();
         while ($row = $result->fetch_assoc()) {
-            $klanten[] = new Klant($row["ID"], $row["Naam"], $row["Email"], $row["Telefoon"], $row["Wachtwoord"], $this->getGebruikersrechtByID($row["FKgebruikersrechtenID"]), $row["Gewijzigd"]);
+            $klanten[] = new Klant($row["id"], $row["naam"], $row["email"], $row["telefoon"], $row["wachtwoord"], $this->getGebruikersrechtByID($row["gebruikersrechten"]), $row["Gewijzigd"]);
         }
         return $klanten;
     }
