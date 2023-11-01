@@ -2,6 +2,8 @@
 
 //KELVIN HEEFT EEN MOOI GLANZENDE BOL
 
+//KELVIN HEEFT EEN MOOI GLANZENDE BOL
+
 namespace database;
 
 require_once 'boeking.php';
@@ -234,7 +236,11 @@ class Database
         $result = $this->db->query("SELECT * FROM klanten");
         $klanten = array();
         while ($row = $result->fetch_assoc()) {
+<<<<<<< Updated upstream
             $klanten[] = new Klant($row["id"], $row["naam"], $row["email"], $row["telefoon"], $row["wachtwoord"], $this->getGebruikersrechtByID($row["gebruikersrechten"]), $row["Gewijzigd"]);
+=======
+            $klanten[] = new Klant($row["id"], $row["Naam"], $row["Email"], $row["Telefoon"], $row["Wachtwoord"], $this->getGebruikersrechtByID($row["FKgebruikersrechtenID"]), $row["Gewijzigd"]);
+>>>>>>> Stashed changes
         }
         return $klanten;
     }
