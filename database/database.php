@@ -234,7 +234,7 @@ class Database
     {
         $this->connect();
         $result = $this->db->query("SELECT * FROM klanten");
-        $klanten = array();
+        // $klanten = array();
         while ($row = $result->fetch_assoc()) {
 
             $klanten[] = new Klant($row["id"], $row["naam"], $row["email"], $row["telefoon"], $row["wachtwoord"], $this->getGebruikersrechtByID($row["gebruikersrechten"]), $row["Gewijzigd"]);
@@ -264,7 +264,7 @@ class Database
         return new Klant($row["ID"], $row["Naam"], $row["Email"], $row["Telefoon"], $row["Wachtwoord"], $this->getGebruikersrechtByID($row["FKgebruikersrechtenID"]), $row["Gewijzigd"]);
 	}
 
-    public function setKlant($id, $naam, $email, $telefoon, $wachtwoord, $fkGebruikersrechtenID, $gewijzigd = null)
+    public function setKlant($id, $Naam, $Email, $Telefoon, $Wachtwoord, $FKGebruikersrechtenID, $Gewijzigd = null)
 	{
 		$this->connect();
 		if (is_null($gewijzigd) || empty($gewijzigd))
@@ -288,7 +288,7 @@ class Database
     public function applyKlant($klant, $new = false)
     {
         $this->connect();
-        $this->setKlant($new ? null : null, $klant->getNaam(), $klant->getEmail(), $klant->getTelefoon(), $klant->getWachtwoord(), $klant->getGebruikersrechten(), $klant->getID());
+        $this->setKlant($new ? null : null, $klant->getID(), $klant->getNaam(), $klant->getEmail(), $klant->getTelefoon(), $klant->getWachtwoord(), $klant->getGebruikersrechten());
         if (!$new) return $klant->getID();
         return $this->db->insert_id;
     }
