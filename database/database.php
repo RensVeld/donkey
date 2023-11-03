@@ -306,7 +306,7 @@ class Database
     public function getGebruikersrechten()
     {
         $this->connect();
-        $result = $this->db->query("SELECT * FROM gebruikersrechten");
+        $result = $this->db->query("SELECT * FROM Gebruikersrechten");
         $gebruikersrechten = array();
         while ($row = $result->fetch_assoc()) {
             $gebruikersrechten[] = new Gebruikersrechten($row["ID"], $row["Recht"], $row["Rechten"]);
